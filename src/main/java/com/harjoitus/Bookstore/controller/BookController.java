@@ -58,5 +58,10 @@ public class BookController {
 		rep.delete(bookId);
 		return "redirect:../booklist";
 	}
+	
+	@RequestMapping(value="/login")
+	public String login() {
+		return "login";
+	} 
 
 }
