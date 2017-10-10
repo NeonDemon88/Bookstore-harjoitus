@@ -25,8 +25,10 @@ public class BookstoreApplication {
 	public CommandLineRunner bookRunner(BookRepository rep, UserRepository urep) {
 		return (args) -> {
 			log.info("tallenna muutama kirja");
-			rep.save(new Book("Kirja", "Title", 1985, "12345-6", 19.85));
-			rep.save(new Book("Toinen", "Title2", 1990, "12569-7", 10.85));
+			rep.save(new Book("Lorukirja", "Maija Poppanen", 1985, "12345-6", 19.85));
+			rep.save(new Book("Aapiskirja", "Mikko Mallikas", 1990, "12569-7", 10.85));
+			rep.save(new Book("Tähtikartasto", "Jaana Järvi", 1998, "23654-8", 15.50));
+			rep.save(new Book("Musiikkikirja", "Joonas Kivi", 2001, "48561-9", 10.50));
 
 			log.info("hae kaikki kirjat");
 			for (Book books : rep.findAll()) {

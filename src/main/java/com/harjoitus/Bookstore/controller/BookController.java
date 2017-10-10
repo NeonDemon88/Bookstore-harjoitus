@@ -26,6 +26,11 @@ public class BookController {
 		model.addAttribute("books", rep.findAll());
 		return "booklist";
 	}
+	
+//	@RequestMapping(value = "/index")
+//	public String index() {
+//		return "index.html";
+//	}
 
 	// REST for all books
 	@RequestMapping(value="/books", method = RequestMethod.GET)
