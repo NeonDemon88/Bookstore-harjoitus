@@ -27,10 +27,10 @@ public class BookController {
 		return "booklist";
 	}
 	
-//	@RequestMapping(value = "/index")
-//	public String index() {
-//		return "index.html";
-//	}
+	@RequestMapping(value = "/")
+	public String index() {
+	    return "index.html";
+	}
 
 	// REST for all books
 	@RequestMapping(value="/books", method = RequestMethod.GET)
